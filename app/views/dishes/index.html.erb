@@ -1,0 +1,7 @@
+<ul>
+	<% @dishes.each do |dish| %>
+	<h1><li><%= link_to dish.name, dish_path(dish) %> </li></h1>
+	<li><%= button_to "Destroy", dish_path(dish), method: :delete %> </li>
+	<% end %>
+	<h1><%= link_to 'Add Dish', new_dish_path %></h1>
+</ul>

@@ -1,0 +1,10 @@
+<%= link_to 'Add Master Dish', new_dish_path, class: 'btn btn-warning btn-lg pull-right' %>
+<%= link_to 'Add Restaurant', new_restaurant_path, class: 'btn btn-success btn-lg pull-right' %>
+<h1>All Restaurants</h1>
+<ul>
+	<% @restaurants.each do |restaurant| %>
+	<h2><li><%= link_to restaurant.name, restaurant_path(restaurant) %> - <%= restaurant.status %></li></h2>
+	<%= link_to "Add Dish", restaurant_add_dish_path(restaurant_id: restaurant.id), class: 'btn btn-sm btn-success' %>
+	<%= button_to "Remove Restaurant",  restaurant_path(restaurant), method: :delete, class: 'btn btn-sm btn-danger' %>
+	<% end %>
+</ul>

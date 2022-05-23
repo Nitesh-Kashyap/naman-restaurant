@@ -1,0 +1,12 @@
+<h2>Adding Review for - <%= @restaurant_dish.dish.name %> </h2>
+<%= form_with url: dish_review_path(dish_id: @restaurant_dish.id) do |form| %>
+	<%= form.label :comment %>
+	<%= form.text_area :comment %>
+	<%= form.submit %>
+<% end %>
+<% if @restaurant_dish.reviews.present? %>
+	<h3>Available Comments</h3>
+	<% @restaurant_dish.reviews.each do |review| %>
+		<li><%= review.comment %> - <%= review.user.email %></li>
+	<% end %>
+<% end %>

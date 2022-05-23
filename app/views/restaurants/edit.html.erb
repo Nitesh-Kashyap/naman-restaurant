@@ -1,0 +1,7 @@
+<h1>Update Restaurant</h1>
+<%= form_with model: @restaurant do |form| %>
+<h2><%= form.label :name %>
+<%= form.text_field :name %>
+<%= form.select :status, options_for_select(["open", "closed"]) %></h2>
+<%= form.submit %>
+<% end %>

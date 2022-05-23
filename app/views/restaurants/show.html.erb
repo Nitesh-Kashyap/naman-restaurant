@@ -1,0 +1,27 @@
+<div class="col-md-12">
+	<%= link_to 'Edit restaurant', edit_restaurant_path(@restaurant), class: 'btn btn-lg btn-warning pull-right' %>
+	<h1><%= @restaurant.name %></h1>
+	<hr>
+	<div class="col-md-6">
+		<%= link_to "Add Dish", restaurant_add_dish_path(restaurant_id: @restaurant.id), class: 'btn btn-lg btn-success pull-right' %>
+		<h2> Available Dishes </h2>
+		<% @dishes.each do |restaurant_dish| %>
+		<li>
+			<%= restaurant_dish.dish.name %> - <%= restaurant_dish.price %>
+		</li> 
+		<%= link_to 'Review Dish', dish_add_review_path(dish_id: restaurant_dish.id), class: 'btn btn-sm btn-info'%>
+		<% end %>
+	</div>
+	<div class="col-md-6">
+		<h2>Restaurant-Comments</h2>
+		<% @restaurant.reviews.each do |review| %>
+		<li><%= review.comment %> - <%= review.user.email %></li>
+		<% end %>
+		<hr>
+		<%= form_with url: restaurant_review_path(restaurant_id: @restaurant.id) do |form| %>
+		<%= form.label :comment %>
+		<%= form.text_area :comment %>
+		<%= form.submit %>
+		<% end %>
+	</div>
+</div>

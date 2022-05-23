@@ -1,0 +1,8 @@
+<h1>Adding a dish for <%= @restaurant.name %></h1>
+<%= form_with url: restaurant_dishes_path do |form| %>
+<%= form.collection_select :dish_id, Dish.all, :id, :name, {include_blank: 'Select a Dish'}, {required: true, class: 'form-control'} %>
+
+<h2><%= form.label :price %>
+<%= form.number_field :price, step: 'any', required: true, class: 'form-control' %></h2>
+<%= form.submit %>
+<% end %>
