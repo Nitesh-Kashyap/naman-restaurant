@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :restaurants do 
     get 'add_dish'
+    post 'dishes'
     match 'download', to: 'restaurants#show', via: [:get, :post]
     post 'review'
   end
