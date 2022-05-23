@@ -16,10 +16,11 @@ Login module(user)
 * use the function test.
  
 Login module(admin)
-* From GUI you can create a user.
+* From GUI you can't create an admin.
+* Using console you can create an admin
 * confirm the account
 * use the function test.
-* 
+
 # Resturant model(user):-
 * You dont have permission to add or delete any restaurant
 * you dont have permission to add or delete any dish.
