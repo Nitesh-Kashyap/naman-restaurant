@@ -23,3 +23,1306 @@ Started GET "/service-worker.js" for ::1 at 2022-05-23 15:59:56 +0530
   
 ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
   
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mRestaurantDish Load (0.3ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" ORDER BY "restaurant_dishes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/restaurants/4" for ::1 at 2022-05-23 16:15:16 +0530
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:66:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.3ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 98.1ms | Allocations: 42251)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.0ms | Allocations: 364)
+  Rendered layouts/_flash.html.erb (Duration: 0.7ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 163.1ms | Allocations: 79085)
+Completed 200 OK in 245ms (Views: 163.2ms | ActiveRecord: 6.0ms | Allocations: 117428)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:15:18 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4/dishes.csv" for ::1 at 2022-05-23 16:15:20 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/restaurants/4/dishes.csv"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:15:22 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:15:51 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4" for ::1 at 2022-05-23 16:17:50 +0530
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.8ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 90.2ms | Allocations: 36652)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.2ms | Allocations: 364)
+  Rendered layouts/_flash.html.erb (Duration: 0.7ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 162.8ms | Allocations: 73556)
+Completed 200 OK in 253ms (Views: 162.5ms | ActiveRecord: 6.3ms | Allocations: 111968)
+
+
+Started GET "/restaurants/4/dishes.csv" for ::1 at 2022-05-23 16:17:52 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/restaurants/4/dishes.csv"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:17:52 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:17:53 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started PUT "/__web_console/repl_sessions/18dade7db0755a16d863285f9c10c2e8" for ::1 at 2022-05-23 16:18:10 +0530
+Started PUT "/__web_console/repl_sessions/18dade7db0755a16d863285f9c10c2e8" for ::1 at 2022-05-23 16:18:10 +0530
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:18:41 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4/dishes.csv" for ::1 at 2022-05-23 16:21:09 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#dishes as CSV
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:50:in `dishes'
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:51:in `dishes'
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 3.0ms | Allocations: 38829)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/restaurants_controller.rb:52:in `dishes'
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:21:11 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:21:12 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4" for ::1 at 2022-05-23 16:21:13 +0530
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.6ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.6ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 125.8ms | Allocations: 34146)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.0ms | Allocations: 358)
+  Rendered layouts/_flash.html.erb (Duration: 0.6ms | Allocations: 171)
+  Rendered layout layouts/application.html.erb (Duration: 197.0ms | Allocations: 70742)
+Completed 200 OK in 223ms (Views: 197.0ms | ActiveRecord: 7.5ms | Allocations: 74163)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:21:15 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4/dishes.csv" for ::1 at 2022-05-23 16:21:15 +0530
+Processing by RestaurantsController#dishes as CSV
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:50:in `dishes'
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:51:in `dishes'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.7ms | Allocations: 3125)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/restaurants_controller.rb:52:in `dishes'
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:21:17 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:21:46 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4" for ::1 at 2022-05-23 16:23:44 +0530
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.4ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 81.3ms | Allocations: 36652)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.2ms | Allocations: 364)
+  Rendered layouts/_flash.html.erb (Duration: 0.8ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 149.8ms | Allocations: 73584)
+Completed 200 OK in 237ms (Views: 149.6ms | ActiveRecord: 7.0ms | Allocations: 111996)
+
+
+Started GET "/restaurants/4/download.csv" for ::1 at 2022-05-23 16:23:45 +0530
+Processing by RestaurantsController#show as CSV
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.7ms | Allocations: 2803)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/restaurants_controller.rb:32:in `show'
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:23:46 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:23:48 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started PUT "/__web_console/repl_sessions/0590c9ccdeeb80b07aedecaca171bd2d" for ::1 at 2022-05-23 16:23:52 +0530
+Started PUT "/__web_console/repl_sessions/0590c9ccdeeb80b07aedecaca171bd2d" for ::1 at 2022-05-23 16:23:53 +0530
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:24:24 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4" for ::1 at 2022-05-23 16:24:57 +0530
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.8ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.6ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 176.8ms | Allocations: 36652)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.3ms | Allocations: 364)
+  Rendered layouts/_flash.html.erb (Duration: 0.7ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 251.6ms | Allocations: 73566)
+Completed 200 OK in 346ms (Views: 247.4ms | ActiveRecord: 12.0ms | Allocations: 111982)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:24:59 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4/download.csv" for ::1 at 2022-05-23 16:25:00 +0530
+Processing by RestaurantsController#show as CSV
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.2ms | Allocations: 5434)
+
+
+  
+NameError (uninitialized constant RestaurantDish::CSV):
+  
+app/models/restaurant_dish.rb:11:in `to_csv'
+app/controllers/restaurants_controller.rb:35:in `block (2 levels) in show'
+app/controllers/restaurants_controller.rb:33:in `show'
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:25:02 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:25:31 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4" for ::1 at 2022-05-23 16:26:01 +0530
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.3ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 83.0ms | Allocations: 36652)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.4ms | Allocations: 364)
+  Rendered layouts/_flash.html.erb (Duration: 1.1ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 154.9ms | Allocations: 73359)
+Completed 200 OK in 841ms (Views: 154.2ms | ActiveRecord: 7.4ms | Allocations: 130938)
+
+
+Started GET "/restaurants/4/download.csv" for ::1 at 2022-05-23 16:26:03 +0530
+Processing by RestaurantsController#show as CSV
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurantDish Load (0.2ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/models/restaurant_dish.rb:15:in `block in to_csv'
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:22:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:22:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:22:in `name'
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:22:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:22:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:22:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:22:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:22:in `name'
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:22:in `name'
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:22:in `name'
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:22:in `name'
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 5)
+Sent data dishes2022-05-23.csv (1.7ms)
+Completed 200 OK in 33ms (Views: 1.3ms | ActiveRecord: 1.6ms | Allocations: 10140)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:26:04 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:26:34 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4" for ::1 at 2022-05-23 16:32:06 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.3ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 95.6ms | Allocations: 36647)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.0ms | Allocations: 364)
+  Rendered layouts/_flash.html.erb (Duration: 0.6ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 166.8ms | Allocations: 73568)
+Completed 200 OK in 266ms (Views: 163.4ms | ActiveRecord: 9.0ms | Allocations: 124148)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:32:08 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4/download.csv" for ::1 at 2022-05-23 16:32:09 +0530
+Processing by RestaurantsController#show as CSV
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurantDish Load (0.1ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/models/restaurant_dish.rb:13:in `block in to_csv'
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 5)
+Sent data dishes2022-05-23.csv (1.7ms)
+Completed 200 OK in 26ms (Views: 1.3ms | ActiveRecord: 1.3ms | Allocations: 9827)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:32:10 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:32:40 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4" for ::1 at 2022-05-23 16:33:29 +0530
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.3ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 77.4ms | Allocations: 36647)
+  Rendered layouts/shared/_header.html.erb (Duration: 2.3ms | Allocations: 364)
+  Rendered layouts/_flash.html.erb (Duration: 0.8ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 143.4ms | Allocations: 73105)
+Completed 200 OK in 232ms (Views: 143.4ms | ActiveRecord: 6.3ms | Allocations: 123670)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:33:32 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4/download.csv" for ::1 at 2022-05-23 16:33:34 +0530
+Processing by RestaurantsController#show as CSV
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurantDish Load (0.5ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/models/restaurant_dish.rb:13:in `block in to_csv'
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 5)
+Sent data dishes2022-05-23.csv (3.7ms)
+Completed 200 OK in 74ms (Views: 2.6ms | ActiveRecord: 4.6ms | Allocations: 9799)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:33:35 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:34:05 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4" for ::1 at 2022-05-23 16:34:15 +0530
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.6ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 181.7ms | Allocations: 36647)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.9ms | Allocations: 364)
+  Rendered layouts/_flash.html.erb (Duration: 0.6ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 249.8ms | Allocations: 73128)
+Completed 200 OK in 487ms (Views: 248.9ms | ActiveRecord: 14.5ms | Allocations: 123707)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:34:18 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4/download.csv" for ::1 at 2022-05-23 16:34:18 +0530
+Processing by RestaurantsController#show as CSV
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurantDish Load (0.5ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ? /* loading for inspect */ LIMIT ?[0m  [["restaurant_id", 4], ["LIMIT", 11]]
+  ↳ app/models/restaurant_dish.rb:10:in `to_csv'
+  [1m[36mRestaurantDish Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ (rdbg)//home/navin-kumolus/naman-restaurant/app/models/restaurant_dish.rb:1:in `to_csv'
+  [1m[36mRestaurantDish Load (0.2ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ? ORDER BY "restaurant_dishes"."id" ASC LIMIT ?[0m  [["restaurant_id", 4], ["LIMIT", 1]]
+  ↳ (rdbg)//home/navin-kumolus/naman-restaurant/app/models/restaurant_dish.rb:1:in `to_csv'
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:21:in `name'
+  [1m[36mRestaurantDish Load (0.5ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/models/restaurant_dish.rb:14:in `block in to_csv'
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:21:in `name'
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:21:in `name'
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 401 Unauthorized in 97563ms (ActiveRecord: 4.1ms | Allocations: 164232)
+
+
+Started GET "/restaurants/4" for ::1 at 2022-05-23 16:38:12 +0530
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.3ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 99.6ms | Allocations: 36647)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.7ms | Allocations: 364)
+  Rendered layouts/_flash.html.erb (Duration: 0.8ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 187.6ms | Allocations: 73513)
+Completed 200 OK in 292ms (Views: 188.4ms | ActiveRecord: 7.9ms | Allocations: 124092)
+
+
+Started GET "/restaurants/4/download.csv" for ::1 at 2022-05-23 16:38:14 +0530
+Processing by RestaurantsController#show as CSV
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurantDish Load (0.4ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/models/restaurant_dish.rb:13:in `block in to_csv'
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 5)
+Sent data dishes2022-05-23.csv (3.2ms)
+Completed 200 OK in 82ms (Views: 2.2ms | ActiveRecord: 3.4ms | Allocations: 9835)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:38:15 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:38:45 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4" for ::1 at 2022-05-23 16:39:08 +0530
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.3ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 77.3ms | Allocations: 36647)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.0ms | Allocations: 364)
+  Rendered layouts/_flash.html.erb (Duration: 0.6ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 142.9ms | Allocations: 73255)
+Completed 200 OK in 241ms (Views: 144.5ms | ActiveRecord: 5.9ms | Allocations: 123867)
+
+
+Started GET "/restaurants/4/download.csv" for ::1 at 2022-05-23 16:39:09 +0530
+Processing by RestaurantsController#show as CSV
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurantDish Load (0.3ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/models/restaurant_dish.rb:13:in `block in to_csv'
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 5)
+Sent data dishes2022-05-23.csv (2.7ms)
+Completed 200 OK in 44ms (Views: 2.1ms | ActiveRecord: 2.1ms | Allocations: 9808)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:39:11 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:39:41 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4" for ::1 at 2022-05-23 16:40:08 +0530
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.3ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 79.2ms | Allocations: 36647)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.2ms | Allocations: 364)
+  Rendered layouts/_flash.html.erb (Duration: 0.6ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 150.1ms | Allocations: 73486)
+Completed 200 OK in 251ms (Views: 149.6ms | ActiveRecord: 6.9ms | Allocations: 124075)
+
+
+Started GET "/restaurants/4/download.csv" for ::1 at 2022-05-23 16:40:10 +0530
+Processing by RestaurantsController#show as CSV
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurantDish Load (0.2ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/models/restaurant_dish.rb:13:in `block in to_csv'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.7ms | Allocations: 7830)
+
+
+  
+NameError (undefined local variable or method `user' for RestaurantDish:Class
+Did you mean?  upsert):
+  
+app/models/restaurant_dish.rb:14:in `block (3 levels) in to_csv'
+app/models/restaurant_dish.rb:14:in `map'
+app/models/restaurant_dish.rb:14:in `block (2 levels) in to_csv'
+app/models/restaurant_dish.rb:13:in `block in to_csv'
+app/models/restaurant_dish.rb:11:in `to_csv'
+app/controllers/restaurants_controller.rb:35:in `block (2 levels) in show'
+app/controllers/restaurants_controller.rb:33:in `show'
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:40:10 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:40:13 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4" for ::1 at 2022-05-23 16:40:30 +0530
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.3ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 78.8ms | Allocations: 36647)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.0ms | Allocations: 364)
+  Rendered layouts/_flash.html.erb (Duration: 0.6ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 144.7ms | Allocations: 73604)
+Completed 200 OK in 312ms (Views: 144.3ms | ActiveRecord: 8.4ms | Allocations: 124207)
+
+
+Started GET "/restaurants/4/download.csv" for ::1 at 2022-05-23 16:40:32 +0530
+Processing by RestaurantsController#show as CSV
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurantDish Load (0.5ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/models/restaurant_dish.rb:13:in `block in to_csv'
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:21:in `name'
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:21:in `name'
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:21:in `name'
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:21:in `name'
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:21:in `name'
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:21:in `name'
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:21:in `name'
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:21:in `name'
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:21:in `name'
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:21:in `name'
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:21:in `name'
+  Rendering text template
+  Rendered text template (Duration: 0.2ms | Allocations: 5)
+Sent data dishes2022-05-23.csv (4.1ms)
+Completed 200 OK in 75ms (Views: 3.0ms | ActiveRecord: 3.8ms | Allocations: 9840)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:40:33 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4" for ::1 at 2022-05-23 16:42:09 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.3ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 75.6ms | Allocations: 36662)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.0ms | Allocations: 364)
+  Rendered layouts/_flash.html.erb (Duration: 0.6ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 142.7ms | Allocations: 73334)
+Completed 200 OK in 245ms (Views: 142.2ms | ActiveRecord: 7.4ms | Allocations: 123920)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:42:12 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4" for ::1 at 2022-05-23 16:42:29 +0530
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.4ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 84.5ms | Allocations: 13743)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.3ms | Allocations: 347)
+  Rendered layouts/_flash.html.erb (Duration: 0.6ms | Allocations: 167)
+  Rendered layout layouts/application.html.erb (Duration: 110.9ms | Allocations: 16974)
+Completed 200 OK in 132ms (Views: 112.6ms | ActiveRecord: 4.6ms | Allocations: 19765)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:42:31 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/" for ::1 at 2022-05-23 16:42:51 +0530
+Processing by RestaurantsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:5
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 1925)
+  Rendered layouts/shared/_header.html.erb (Duration: 0.9ms | Allocations: 119)
+  Rendered layouts/_flash.html.erb (Duration: 0.2ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 4316)
+Completed 200 OK in 44ms (Views: 30.3ms | ActiveRecord: 1.2ms | Allocations: 5903)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 16:42:53 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  

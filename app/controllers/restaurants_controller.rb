@@ -30,6 +30,10 @@ class RestaurantsController < ApplicationController
 
   def show
     @dishes = RestaurantDish.where(restaurant_id: @restaurant.id)
+    respond_to do |format|
+      format.html
+      format.csv { send_data RestaurantDish.to_csv(@dishes), filename: "dishes#{Date.today}.csv" }
+    end
   end
 
   def destroy
@@ -63,7 +67,7 @@ class RestaurantsController < ApplicationController
   end
 
   def set_restaurant
-    @restaurant = Restaurant.find_by(id: params[:id])
+    @restaurant = Restaurant.find_by(id: params[:id]) || Restaurant.find_by(id: params[:restaurant_id])
   end
 
   def check_user
