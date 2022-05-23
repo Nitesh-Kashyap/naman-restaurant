@@ -1,5 +1,5 @@
 class DishesController < ApplicationController
-  before_action :check_user, except: [:index, :show] 
+  before_action :check_user, except: [:index, :show, :add_review, :review] 
   before_action :set_dish, only: [:update, :edit, :show, :destroy]
 
 
@@ -61,7 +61,7 @@ class DishesController < ApplicationController
 
   def check_user
     unless current_user.is_admin?
-      redirect_to dishes_path, notice: "You Don't have enough permission to perform this action"
+      redirect_to restaurants_path, notice: "You Don't have enough permission to perform this action"
     end
   end
 end

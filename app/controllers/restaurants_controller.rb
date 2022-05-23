@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  before_action :check_user, except: [:index, :show] 
+  before_action :check_user, except: [:index, :show, :review] 
   before_action :set_restaurant, only: [:update, :edit, :show, :destroy]
 
   def index

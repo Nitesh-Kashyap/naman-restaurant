@@ -3171,3 +3171,552 @@ Started GET "/service-worker.js" for ::1 at 2022-05-23 16:58:51 +0530
   
 ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
   
+Started GET "/" for ::1 at 2022-05-23 17:00:13 +0530
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:5
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 5330)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.3ms | Allocations: 364)
+  Rendered layouts/_flash.html.erb (Duration: 0.7ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 107.4ms | Allocations: 42191)
+Completed 200 OK in 183ms (Views: 113.2ms | ActiveRecord: 2.5ms | Allocations: 72455)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:00:15 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/users/sign_out" for ::1 at 2022-05-23 17:00:18 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms (ActiveRecord: 0.4ms | Allocations: 4518)
+
+
+Started GET "/" for ::1 at 2022-05-23 17:00:18 +0530
+Processing by RestaurantsController#index as HTML
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.0ms | Allocations: 391)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-23 17:00:18 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /home/navin-kumolus/.rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/navin-kumolus/.rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 7.4ms | Allocations: 1021)
+  Rendered /home/navin-kumolus/.rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 26.5ms | Allocations: 3874)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.0ms | Allocations: 108)
+  Rendered layouts/_flash.html.erb (Duration: 0.2ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | Allocations: 6316)
+Completed 200 OK in 50ms (Views: 44.2ms | ActiveRecord: 0.0ms | Allocations: 8286)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:00:20 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/" for ::1 at 2022-05-23 17:00:30 +0530
+Processing by RestaurantsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:5
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 1596)
+  Rendered layouts/shared/_header.html.erb (Duration: 0.7ms | Allocations: 120)
+  Rendered layouts/_flash.html.erb (Duration: 0.2ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 4003)
+Completed 200 OK in 102ms (Views: 24.6ms | ActiveRecord: 0.9ms | Allocations: 9375)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:00:32 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4/add_dish" for ::1 at 2022-05-23 17:00:36 +0530
+Processing by RestaurantsController#add_dish as HTML
+  Parameters: {"restaurant_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Redirected to http://localhost:3000/restaurants
+Filter chain halted as :check_user rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms | Allocations: 1441)
+
+
+Started GET "/restaurants" for ::1 at 2022-05-23 17:00:36 +0530
+Processing by RestaurantsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:5
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1595)
+  Rendered layouts/shared/_header.html.erb (Duration: 0.4ms | Allocations: 119)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4006)
+Completed 200 OK in 17ms (Views: 9.8ms | ActiveRecord: 0.6ms | Allocations: 5537)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:00:38 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4" for ::1 at 2022-05-23 17:00:38 +0530
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.7ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 158.3ms | Allocations: 34220)
+  Rendered layouts/shared/_header.html.erb (Duration: 0.3ms | Allocations: 119)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 165.7ms | Allocations: 36603)
+Completed 200 OK in 246ms (Views: 159.6ms | ActiveRecord: 9.0ms | Allocations: 55480)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:00:40 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:00:49 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started POST "/restaurants/4/review" for ::1 at 2022-05-23 17:01:01 +0530
+Processing by RestaurantsController#review as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>"Hi", "commit"=>"Save ", "restaurant_id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Redirected to http://localhost:3000/restaurants
+Filter chain halted as :check_user rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 0.5ms | Allocations: 1498)
+
+
+Started GET "/restaurants" for ::1 at 2022-05-23 17:01:01 +0530
+Processing by RestaurantsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:5
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1596)
+  Rendered layouts/shared/_header.html.erb (Duration: 0.5ms | Allocations: 119)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 4005)
+Completed 200 OK in 32ms (Views: 22.8ms | ActiveRecord: 0.8ms | Allocations: 5533)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:01:03 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:01:32 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants" for ::1 at 2022-05-23 17:02:07 +0530
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:5
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 5330)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.2ms | Allocations: 364)
+  Rendered layouts/_flash.html.erb (Duration: 0.9ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 92.8ms | Allocations: 42080)
+Completed 200 OK in 191ms (Views: 97.5ms | ActiveRecord: 2.9ms | Allocations: 72332)
+
+
+Started GET "/restaurants/7" for ::1 at 2022-05-23 17:02:09 +0530
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.7ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 7]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 7], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 73.5ms | Allocations: 31560)
+  Rendered layouts/shared/_header.html.erb (Duration: 0.3ms | Allocations: 119)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 80.6ms | Allocations: 34214)
+Completed 200 OK in 111ms (Views: 76.8ms | ActiveRecord: 5.4ms | Allocations: 53133)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:02:09 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:02:10 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started POST "/restaurants/7/review" for ::1 at 2022-05-23 17:02:18 +0530
+Processing by RestaurantsController#review as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>"Customer Review\r\n", "commit"=>"Save ", "restaurant_id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:57:in `review'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/restaurants_controller.rb:58:in `review'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:58:in `review'
+  [1m[36mReview Create (1.0ms)[0m  [1m[32mINSERT INTO "reviews" ("comment", "user_id", "created_at", "updated_at", "reviewable_type", "reviewable_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "Customer Review\r\n"], ["user_id", 10], ["created_at", "2022-05-23 11:32:18.583215"], ["updated_at", "2022-05-23 11:32:18.583215"], ["reviewable_type", "Restaurant"], ["reviewable_id", 7]]
+  ↳ app/controllers/restaurants_controller.rb:58:in `review'
+  [1m[36mTRANSACTION (165.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/restaurants_controller.rb:58:in `review'
+Redirected to http://localhost:3000/restaurants/7
+Completed 302 Found in 215ms (ActiveRecord: 168.3ms | Allocations: 6198)
+
+
+Started GET "/restaurants/7" for ::1 at 2022-05-23 17:02:18 +0530
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.5ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 7]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 7], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 38.6ms | Allocations: 5428)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.6ms | Allocations: 119)
+  Rendered layouts/_flash.html.erb (Duration: 0.2ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 54.8ms | Allocations: 7826)
+Completed 200 OK in 71ms (Views: 54.7ms | ActiveRecord: 3.0ms | Allocations: 9861)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:02:20 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/7/download.csv" for ::1 at 2022-05-23 17:02:24 +0530
+Processing by RestaurantsController#show as CSV
+  Parameters: {"restaurant_id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  [1m[36mRestaurantDish Load (0.7ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 7]]
+  ↳ app/models/restaurant_dish.rb:13:in `block in to_csv'
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/models/restaurant_dish.rb:20:in `name'
+  Rendering text template
+  Rendered text template (Duration: 0.1ms | Allocations: 4)
+Sent data dishes2022-05-23.csv (2.9ms)
+Completed 200 OK in 31ms (Views: 2.1ms | ActiveRecord: 2.4ms | Allocations: 4581)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:02:25 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/dishes/15/add_review" for ::1 at 2022-05-23 17:02:37 +0530
+Processing by DishesController#add_review as HTML
+  Parameters: {"dish_id"=>"15"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Redirected to http://localhost:3000/dishes
+Filter chain halted as :check_user rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 0.4ms | Allocations: 1518)
+
+
+Started GET "/dishes" for ::1 at 2022-05-23 17:02:37 +0530
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.6ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  ↳ app/views/dishes/index.html.erb:2
+  Rendered dishes/index.html.erb within layouts/application (Duration: 17.2ms | Allocations: 2914)
+  Rendered layouts/shared/_header.html.erb (Duration: 0.7ms | Allocations: 130)
+  Rendered layouts/_flash.html.erb (Duration: 0.2ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 5406)
+Completed 200 OK in 42ms (Views: 34.2ms | ActiveRecord: 0.9ms | Allocations: 7489)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:02:39 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:02:52 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:03:21 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/7" for ::1 at 2022-05-23 17:03:49 +0530
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.5ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 7]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 7], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 83.6ms | Allocations: 32665)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.7ms | Allocations: 364)
+  Rendered layouts/_flash.html.erb (Duration: 0.9ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 155.1ms | Allocations: 69542)
+Completed 200 OK in 360ms (Views: 157.6ms | ActiveRecord: 9.6ms | Allocations: 120024)
+
+
+Started GET "/dishes/15/add_review" for ::1 at 2022-05-23 17:03:51 +0530
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:03:51 +0530
+Processing by DishesController#add_review as HTML
+  Parameters: {"dish_id"=>"15"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRestaurantDish Load (0.5ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/dishes_controller.rb:42:in `add_review'
+  Rendering layout layouts/application.html.erb
+  Rendering dishes/add_review.html.erb within layouts/application
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/dishes/add_review.html.erb:1
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 15], ["reviewable_type", "RestaurantDish"]]
+  ↳ app/views/dishes/add_review.html.erb:7
+  Rendered dishes/add_review.html.erb within layouts/application (Duration: 19.3ms | Allocations: 4256)
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+  Rendered layouts/shared/_header.html.erb (Duration: 0.7ms | Allocations: 145)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered layout layouts/application.html.erb (Duration: 96.9ms | Allocations: 18656)
+Completed 200 OK in 117ms (Views: 101.1ms | ActiveRecord: 1.5ms | Allocations: 21912)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:03:53 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started POST "/dishes/15/review" for ::1 at 2022-05-23 17:03:56 +0530
+Processing by DishesController#review as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "comment"=>"Nice", "commit"=>"Save ", "dish_id"=>"15"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRestaurantDish Load (0.4ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/dishes_controller.rb:46:in `review'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dishes_controller.rb:47:in `review'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/dishes_controller.rb:47:in `review'
+  [1m[36mReview Create (1.3ms)[0m  [1m[32mINSERT INTO "reviews" ("comment", "user_id", "created_at", "updated_at", "reviewable_type", "reviewable_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["comment", "Nice"], ["user_id", 10], ["created_at", "2022-05-23 11:33:56.992969"], ["updated_at", "2022-05-23 11:33:56.992969"], ["reviewable_type", "RestaurantDish"], ["reviewable_id", 15]]
+  ↳ app/controllers/dishes_controller.rb:47:in `review'
+  [1m[36mTRANSACTION (225.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dishes_controller.rb:47:in `review'
+Redirected to http://localhost:3000/dishes/15/add_review
+Completed 302 Found in 270ms (ActiveRecord: 228.9ms | Allocations: 6186)
+
+
+Started GET "/dishes/15/add_review" for ::1 at 2022-05-23 17:03:57 +0530
+Processing by DishesController#add_review as HTML
+  Parameters: {"dish_id"=>"15"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRestaurantDish Load (0.3ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/dishes_controller.rb:42:in `add_review'
+  Rendering layout layouts/application.html.erb
+  Rendering dishes/add_review.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/dishes/add_review.html.erb:1
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 15], ["reviewable_type", "RestaurantDish"]]
+  ↳ app/views/dishes/add_review.html.erb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/dishes/add_review.html.erb:10
+  Rendered dishes/add_review.html.erb within layouts/application (Duration: 20.2ms | Allocations: 3321)
+  Rendered layouts/shared/_header.html.erb (Duration: 0.6ms | Allocations: 121)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 5721)
+Completed 200 OK in 47ms (Views: 33.0ms | ActiveRecord: 1.8ms | Allocations: 7664)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:03:59 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/" for ::1 at 2022-05-23 17:04:00 +0530
+Processing by RestaurantsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:5
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 1926)
+  Rendered layouts/shared/_header.html.erb (Duration: 1.0ms | Allocations: 119)
+  Rendered layouts/_flash.html.erb (Duration: 0.2ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 4331)
+Completed 200 OK in 38ms (Views: 27.8ms | ActiveRecord: 0.9ms | Allocations: 5897)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:04:02 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/restaurants/4" for ::1 at 2022-05-23 17:04:03 +0530
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/restaurants_controller.rb:70:in `set_restaurant'
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/show.html.erb within layouts/application
+  [1m[36mRestaurantDish Load (0.2ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."restaurant_id" = ?[0m  [["restaurant_id", 4]]
+  ↳ app/views/restaurants/show.html.erb:9
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mCACHE Dish Load (0.0ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:11
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 4], ["reviewable_type", "Restaurant"]]
+  ↳ app/views/restaurants/show.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/restaurants/show.html.erb:19
+  Rendered restaurants/show.html.erb within layouts/application (Duration: 48.0ms | Allocations: 13231)
+  Rendered layouts/shared/_header.html.erb (Duration: 0.2ms | Allocations: 119)
+  Rendered layouts/_flash.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 52.2ms | Allocations: 15614)
+Completed 200 OK in 61ms (Views: 51.7ms | ActiveRecord: 2.3ms | Allocations: 17662)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:04:04 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/dishes/3/add_review" for ::1 at 2022-05-23 17:04:08 +0530
+Processing by DishesController#add_review as HTML
+  Parameters: {"dish_id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRestaurantDish Load (0.1ms)[0m  [1m[34mSELECT "restaurant_dishes".* FROM "restaurant_dishes" WHERE "restaurant_dishes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dishes_controller.rb:42:in `add_review'
+  Rendering layout layouts/application.html.erb
+  Rendering dishes/add_review.html.erb within layouts/application
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" WHERE "dishes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/dishes/add_review.html.erb:1
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."reviewable_id" = ? AND "reviews"."reviewable_type" = ?[0m  [["reviewable_id", 3], ["reviewable_type", "RestaurantDish"]]
+  ↳ app/views/dishes/add_review.html.erb:7
+  Rendered dishes/add_review.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2667)
+  Rendered layouts/shared/_header.html.erb (Duration: 0.4ms | Allocations: 121)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 5066)
+Completed 200 OK in 18ms (Views: 11.6ms | ActiveRecord: 0.6ms | Allocations: 7017)
+
+
+Started GET "/service-worker.js" for ::1 at 2022-05-23 17:04:10 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/service-worker.js"):
+  
+Started GET "/" for ::1 at 2022-05-23 17:04:11 +0530
+Processing by RestaurantsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering restaurants/index.html.erb within layouts/application
+  [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants"[0m
+  ↳ app/views/restaurants/index.html.erb:5
+  Rendered restaurants/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1595)
+  Rendered layouts/shared/_header.html.erb (Duration: 0.4ms | Allocations: 119)
+  Rendered layouts/_flash.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4000)
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 0.4ms | Allocations: 5535)
+
+
