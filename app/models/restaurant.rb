@@ -6,7 +6,7 @@ class Restaurant < ApplicationRecord
 
   def self.search(condition)
   	if condition.present?
-      where("restaurants.name like ?", "#{condition}%")
+      where("restaurants.name like ?", "%#{condition}%")
     else
     	self.all
     end

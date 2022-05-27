@@ -25,7 +25,7 @@ class RestaurantsController < ApplicationController
 
   def update
     @restaurant.update(restaurant_params)
-    RestaurantStatusUpdateJob.set(wait: 15.seconds).perform_later(@restaurant, params[:status])
+    RestaurantStatusUpdateJob.set(wait: 15.seconds).perform_later(@restaurant, params[:restaurant][:status])
     redirect_to restaurant_path(@restaurant)
   end
 
