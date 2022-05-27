@@ -3,7 +3,8 @@ class RestaurantsController < ApplicationController
   before_action :set_restaurant, only: [:update, :edit, :show, :destroy]
 
   def index
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant.search(params[:search])
+    @restaurants = @restaurants.joins(:dishes).where(dishes: {id: params[:dish_id]}).uniq if params[:dish_id].present?
   end
 
   def new
@@ -29,7 +30,8 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    @dishes = RestaurantDish.where(restaurant_id: @restaurant.id)
+    @dishes = RestaurantDish.joins(:dish).search(params[:search]).where(restaurant_id: @restaurant.id)
+    @dishes = @dishes.where(dish_id: params[:dish_id]).uniq if params[:dish_id].present?
     respond_to do |format|
       format.html
       format.csv { send_data RestaurantDish.to_csv(@dishes), filename: "dishes#{Date.today}.csv" }

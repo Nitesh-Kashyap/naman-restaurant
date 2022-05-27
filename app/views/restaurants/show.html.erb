@@ -6,6 +6,7 @@
 		<%= link_to "Download CSV", restaurant_download_path(@restaurant, format: :csv), class: 'btn btn-lg btn-warning' %>
 		<%= link_to "Add Dish", restaurant_add_dish_path(restaurant_id: @restaurant.id), class: 'btn btn-lg btn-success pull-right' %>
 		<h2> Available Dishes </h2>
+		<%= render "layouts/shared/filters", path: restaurant_path(@restaurant.id) %>
 		<% @dishes.each do |restaurant_dish| %>
 		<li>
 			<%= restaurant_dish.dish.name %> - <%= restaurant_dish.price %>

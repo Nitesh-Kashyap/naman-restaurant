@@ -1,6 +1,7 @@
 <%= link_to 'Add Master Dish', new_dish_path, class: 'btn btn-warning btn-lg pull-right' %>
 <%= link_to 'Add Restaurant', new_restaurant_path, class: 'btn btn-success btn-lg pull-right' %>
 <h1>All Restaurants</h1>
+<%= render "layouts/shared/filters", path: restaurants_path %>
 <ul>
 	<% @restaurants.each do |restaurant| %>
 	<h2><li><%= link_to restaurant.name, restaurant_path(restaurant) %> - <%= restaurant.status %></li></h2>

@@ -19,4 +19,12 @@ class RestaurantDish < ApplicationRecord
   def name
     self.dish.try(:name)
   end
+
+  def self.search(condition)
+    if condition.present?
+      where("dishes.name like ?", "#{condition}%")
+    else
+      self.all
+    end
+  end
 end

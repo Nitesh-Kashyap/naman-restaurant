@@ -1,0 +1,13 @@
+<div class="row wrapper">
+  <div class="row">
+    <%= form_for :search, url: path, method: :get, html: { class: "form-inline" }, authenticity_token: true do |f| %>
+    <div class="form-group">
+        <%= select_tag(:dish_id, options_for_select(Dish.pluck(:name, :id), params[:dish_id]), prompt: "All Dishes", class: "form-control setheight", style: "width: 100%;") %>
+    </div>
+    <div class="form-group pt-1">
+      <input type="text" name="search" class="form-control" value="<%= params[:search] %>" placeholder="Search..." autocomplete="off">
+      <button type="submit" class="btn btn-info"> Filter </button>
+    </div>
+    <% end %>
+  </div>
+</div>
