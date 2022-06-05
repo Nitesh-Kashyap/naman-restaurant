@@ -5,11 +5,11 @@
 
 # Steps to Run the project
 
-clone -  git clone https://github.com/Nitesh-Kashyap/naman-restaurant.git
-cd naman-restaurant
-bundle
-rails db:setup
-rails server
+* clone -  git clone https://github.com/Nitesh-Kashyap/naman-restaurant.git
+* cd naman-restaurant
+* bundle
+* rails db:setup
+* rails server
 
 # Description
 
